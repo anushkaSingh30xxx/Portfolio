@@ -3,6 +3,7 @@ import { Link as LinkR } from "react-router-dom";
 import styled, { useTheme } from "styled-components";
 import { DiCssdeck } from 'react-icons/di'; 
 import { FaBars } from "react-icons/fa";
+import { Bio } from '../../data/constants';
 
 const Nav = styled.div`
     background-color: ${({theme}) => theme.card_light};
@@ -24,7 +25,7 @@ const NavContainer = styled.div`
   align-items: center;
   height: 60px;
   z-index: 1;
-  width: 100%;
+  width: 80%;
   padding: 0 24px;
   max-width: 1200px;
 `;
@@ -187,7 +188,7 @@ const Navbar = () => {
           <NavLink href='#education'>Education</NavLink>
         </NavItems>
         <ButtonContainer>
-          <GitHubButton>Github Profile</GitHubButton>
+        <GitHubButton href={Bio.github} target="_blank">Github Profile</GitHubButton>
         </ButtonContainer>
       </NavContainer>
       { open && <MobileMenu open={open}>
